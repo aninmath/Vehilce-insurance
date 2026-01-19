@@ -156,6 +156,11 @@ class DataTransformation:
             )
             logging.info("SMOTEENN applied to train-test df.")
 
+            # input_feature_train_final = input_feature_train_arr
+            # input_feature_test_final = input_feature_test_arr
+            # target_feature_train_final = target_feature_train_df
+            # target_feature_test_final = target_feature_test_df
+
             train_arr = np.c_[input_feature_train_final, np.array(target_feature_train_final)]
             test_arr = np.c_[input_feature_test_final, np.array(target_feature_test_final)]
             logging.info("feature-target concatenation done for train-test df.")

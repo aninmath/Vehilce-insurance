@@ -4,7 +4,7 @@ numpy
 matplotlib
 plotly
 seaborn
-scikit-learn
+scikit-learn == 1.8.0
 pymongo
 from_root
 dill
@@ -20,4 +20,5 @@ jinja2
 imblearn
 from_root
 dotenv
+imbalanced-learn
 -e .

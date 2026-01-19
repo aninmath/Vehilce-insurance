@@ -60,7 +60,7 @@ class ModelTrainer:
             recall = recall_score(y_test, y_pred)
 
             # Creating metric artifact
-            metric_artifact = ClassificationMetricArtifact(f1_score=f1, precision_score=precision, recall_score=recall)
+            metric_artifact = ClassificationMetricArtifact(f1_score=f1, precision_score=precision, recall_score=recall, accuracy_score= accuracy)
             return model, metric_artifact
         
         except Exception as e:
@@ -105,7 +105,7 @@ class ModelTrainer:
             # Create and return the ModelTrainerArtifact
             model_trainer_artifact = ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,
-                metric_artifact=metric_artifact,
+                metric_artifact=metric_artifact
             )
             logging.info(f"Model trainer artifact: {model_trainer_artifact}")
             return model_trainer_artifact
